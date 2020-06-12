@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { UserService } from './user.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'rickyMorty';
+  users: any[] = [];
+
+  constructor(
+    protected userService: UserService
+  ) {
+  }
+
+  ngOnInit() {
+    this.userService.getUsers()
+      .subscribe(
+        (data) => { // Success
+          this.users = data['results'];
+        },
+        (error) => {
+          console.error(error);
+        }
+      );
+  }
 }

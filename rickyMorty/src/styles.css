@@ -1,6 +1,7 @@
 body{
   background: #00afc7;
 
+  margin: 1rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -14,10 +15,15 @@ body{
   }
 }
 
+.header{
+  padding: 14px;
+  text-align: center;
+}
+
 .footer{
   position: absolute;
   position: absolute;
-  bottom: 0px;
+  bottom: 5px;
   width: 100%;
 }
 
