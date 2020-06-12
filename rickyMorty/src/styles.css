@@ -1,0 +1,21 @@
+body{
+  background: #00afc7;
+
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    background-color: #bfce51;
+    font-family: Open-Sans;
+    margin: 1rem;
+  }
+  .row, .navbar {
+    flex-direction: column;
+  }
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
