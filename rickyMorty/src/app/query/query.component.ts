@@ -8,11 +8,17 @@ import { JsonService} from '../json.service';
 })
 export class QueryComponent implements OnInit {
 
-  constructor(public json: JsonService) {
-    this.json.getJson('https://rickandmortyapi.com/api/character/').subscribe((res: any) => {
-      console.log(res);
-    });
+  constructor(
+    private json: JsonService
+  ) {}
+
+
+  getNombrePersonaje(){
+    this.json.getPersonages();
   }
+
+
+
   ngOnInit(): void {
   }
 

@@ -1,14 +1,28 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import {Task} from 'protractor/built/taskScheduler';
 
 @Injectable({
   providedIn: 'root'
 })
 export class JsonService {
 
-  constructor(private http: HttpClient) { }
+  private api = 'https://rickandmortyapi.com';
 
-  getJson(url: string){
-    return this.http.get(url);
+
+  constructor(
+    private http: HttpClient
+  ) { }
+
+
+  getPersonages(){
+    const path = `${this.api}/api/character/`;
+    fetch(this.api)
+      
+      .then(function(response) {
+        return response.json();
+      });
   }
+
 }
+
