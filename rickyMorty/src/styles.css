@@ -1,18 +1,28 @@
+{font-family: Open-Sans;}
+
+
 body{
   background: #00afc7;
-
-  margin: 1rem;
+  border-style: solid;
+  border-width: 2px;
+  margin: 7rem;
 }
 
 @media only screen and (max-width: 768px) {
   body {
     background-color: #bfce51;
-    font-family: Open-Sans;
+
     margin: 1rem;
   }
   .row, .navbar {
     flex-direction: column;
   }
+}
+
+h2 {
+  font-size: 40px;
+  color: aliceblue;
+  align-content: center;
 }
 
 .header{
@@ -23,7 +33,7 @@ body{
 .footer{
   position: absolute;
   position: absolute;
-  bottom: 5px;
+  bottom: 0px;
   width: 100%;
 }
 

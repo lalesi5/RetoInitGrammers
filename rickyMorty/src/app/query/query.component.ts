@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
 
+
 @Component({
   selector: 'app-query',
   templateUrl: './query.component.html',
@@ -9,7 +10,7 @@ import { HttpClient} from '@angular/common/http';
 export class QueryComponent implements OnInit {
 
   conversiones: any;
-  rta: [];
+  rta: any[];
 
   constructor(
     private http: HttpClient
@@ -17,12 +18,10 @@ export class QueryComponent implements OnInit {
 
 
   ngOnInit(): void {
-  this.http.get('https://rickandmortyapi.com/api/character/')
-    .subscribe(data => {
-      this.conversiones = data;
+  this.http.get('https://rickandmortyapi.com/api/character')
+    .subscribe((data: any) => {
+      this.conversiones = data.results;
       this.rta = this.conversiones;
-
-      console.log('Esta corriendo la query', this.rta);
     });
 
   }
