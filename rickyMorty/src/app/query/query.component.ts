@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { JsonService} from '../json.service';
 
 @Component({
   selector: 'app-query',
@@ -7,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QueryComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(public json: JsonService) {
+    this.json.getJson('https://rickandmortyapi.com/api/character/').subscribe((res: any) => {
+      console.log(res);
+    });
+  }
   ngOnInit(): void {
   }
 
