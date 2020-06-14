@@ -1,24 +1,24 @@
-<button class="arrow1" onclick=" "></button>
-<button class="arrow2" onclick=" "></button>
 
+<button class="arrow1" onclick="llamarString(0);"></button>
+<button class="arrow2" onclick="llamarString(2);"></button>
 
-<div class="table-responsive">
-  <table style="width: 100%">
+<div>
+  <table>
       <tbody>
       <tr>
-        <td>
-          <img id="imgPrincipal" src='{{rta[0].image}}'>
+        <td id="tdImg">
+          <img id="imgPrincipal" src='{{picture}}'>
         </td>
-        <td>
-          <h2>{{rta[0].name}}</h2><br><br><br><br><br><br><br><br><br><br>
+        <td id="tdCajas">
+          <h2>{{nombre}}</h2>
           <div  id="cajas">
-            <p>Origen: {{rta[0].origin.name}}</p>
+            <p>Origen: {{origin}}</p>
           </div>
           <div id="cajas">
-            <p>Especie: {{rta[0].species}}</p>
+            <p>Especie: {{species}}</p>
           </div>
           <div id="cajas">
-            <p>Estatus: {{rta[0].status}}</p>
+            <p>Estatus: {{status}}</p>
           </div>
         </td>
       </tr>

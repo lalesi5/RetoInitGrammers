@@ -10,6 +10,11 @@ import { HttpClient} from '@angular/common/http';
 export class QueryComponent implements OnInit {
 
   conversiones: any;
+  nombre: string;
+  origin: string;
+  species: string;
+  status: string;
+  picture: any;
   rta: any[];
 
   constructor(
@@ -18,18 +23,22 @@ export class QueryComponent implements OnInit {
 
 
   ngOnInit(): void {
-  this.llamarString();
+  this.llamarString(1);
   }
 
+  // Llamada a la Api para obtener JSON de datos
 
-  llamarString(): void {
+  llamarString(id: number): void {
+
     this.http.get('https://rickandmortyapi.com/api/character')
       .subscribe((data: any) => {
         this.conversiones = data.results;
         this.rta = this.conversiones;
+        this.picture = this.rta[id].image;
+        this.nombre = this.rta[id].name;
+        this.origin = this.rta[id].origin.name;
+        this.species = this.rta[id].species;
+        this.status = this.rta[id].status;
       });
   }
-
-  llamarAnterior(): void {}
-
 }
