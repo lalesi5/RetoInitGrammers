@@ -12,7 +12,7 @@ Requisitos:
 Pasos Para la ejecucion:
 
 1. Clonar el repositorio a una carpeta local
-2. Mediante la terminal ubicarse en el directorio " InitGrammers\RetoInitGrammers\rickyMorty"
+2. Mediante la terminal ubicarse en el directorio "RetoInitGrammers\rickyMorty"
 
 Ejecutar:
  *  npm install -g @anglular/cli
