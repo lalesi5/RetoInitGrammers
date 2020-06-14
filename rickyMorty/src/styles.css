@@ -60,6 +60,13 @@ p {
   vertical-align: center;
 }
 
+#tdCajas {
+
+  text-align: center;
+  height: 700px;
+  vertical-align: center;
+}
+
 .arrow1{
   width: 2em;
   height: 2em;
@@ -136,10 +143,10 @@ table td {
     font-weight: bold;
     border-color: #f7de8e ;
     background-color: #f7de8e;
-    width: 200px;
+    width: 150px;
     border-radius: 5px;
-    margin-left: 85px;
-    margin-top: 0px;
+    bottom: 0px;
+    text-align: center;
   }
 
   #imgfooter {
@@ -168,10 +175,28 @@ table td {
     table-layout: fixed;
   }
 
-  table td {
+  tr {
     display: block;
-    vertical-align: center;
-    border-bottom: 0;
+  }
+  thead{
+    display: none;
   }
 
+  td {
+    display: block;
+    text-align:left;
+    margin: auto;
+  }
+  #tdImg {
+    text-align: center;
+    height: 0px;
+    vertical-align: center;
+
+  }
+  #tdCajas {
+    text-align: center;
+    height: 0px;
+    vertical-align: bottom;
+    padding-top: 125px;
+  }
 }

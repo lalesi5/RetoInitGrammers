@@ -34,11 +34,11 @@ export class QueryComponent implements OnInit {
       .subscribe((data: any) => {
         this.conversiones = data.results;
         this.rta = this.conversiones;
-        this.picture = this.rta[0].image;
-        this.nombre = this.rta[0].name;
-        this.origin = this.rta[0].origin.name;
-        this.species = this.rta[0].species;
-        this.status = this.rta[0].status;
+        this.picture = this.rta[id].image;
+        this.nombre = this.rta[id].name;
+        this.origin = this.rta[id].origin.name;
+        this.species = this.rta[id].species;
+        this.status = this.rta[id].status;
       });
   }
 }
