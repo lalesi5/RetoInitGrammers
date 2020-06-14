@@ -1,7 +1,3 @@
-
-<button class="arrow1" onclick="llamarString(0);"></button>
-<button class="arrow2" onclick="llamarString(2);"></button>
-
 <div>
   <table>
       <tbody>
@@ -10,7 +6,9 @@
           <img id="imgPrincipal" src='{{picture}}'>
         </td>
         <td id="tdCajas">
+          <div id="tdNombre">
           <h2>{{nombre}}</h2>
+          </div>
           <div  id="cajas">
             <p>Origen: {{origin}}</p>
           </div>
@@ -25,3 +23,7 @@
       </tbody>
     </table>
 </div>
+
+
+<button class="arrow1" (click)="anterior()"></button>
+<button class="arrow2" (click)="siguiente()"></button>
