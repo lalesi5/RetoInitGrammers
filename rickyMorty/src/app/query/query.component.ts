@@ -16,7 +16,7 @@ export class QueryComponent implements OnInit {
   status: string;
   picture: any;
   rta: any[];
-  inicio = 0;
+  numero: number;
 
   constructor(
     private http: HttpClient
@@ -24,50 +24,31 @@ export class QueryComponent implements OnInit {
 
 
   ngOnInit(): void {
-  this.llamarString();
+  this.llamarString(0);
   }
 
   // Llamada a la Api para obtener JSON de datos
 
-  llamarString(): void {
+  llamarString(id: number): void {
 
     this.http.get('https://rickandmortyapi.com/api/character')
       .subscribe((data: any) => {
         this.conversiones = data.results;
-        this.rta = this.conversiones;
-        this.picture = this.rta[this.inicio].image;
-        this.nombre = this.rta[this.inicio].name;
-        this.origin = this.rta[this.inicio].origin.name;
-        this.species = this.rta[this.inicio].species;
-        this.status = this.rta[this.inicio].status;
+        this.picture = this.conversiones[id].image;
+        this.nombre = this.conversiones[id].name;
+        this.origin = this.conversiones[id].origin.name;
+        this.species = this.conversiones[id].species;
+        this.status = this.conversiones[id].status;
       });
+    this.numero = id;
   }
 
-  llamarStringAnterior(): void {
-
-    this.http.get('https://rickandmortyapi.com/api/character')
-      .subscribe((data: any) => {
-        this.conversiones = data.results;
-        this.rta = this.conversiones;
-        this.picture = this.rta[--this.inicio].image;
-        this.nombre = this.rta[--this.inicio].name;
-        this.origin = this.rta[--this.inicio].origin.name;
-        this.species = this.rta[--this.inicio].species;
-        this.status = this.rta[--this.inicio].status;
-      });
+  siguiente(): void{
+    this.numero++;
+    this.llamarString(this.numero);
   }
-
-  llamarStringSiguiente(): void {
-
-    this.http.get('https://rickandmortyapi.com/api/character')
-      .subscribe((data: any) => {
-        this.conversiones = data.results;
-        this.rta = this.conversiones;
-        this.picture = this.rta[--this.inicio].image;
-        this.nombre = this.rta[--this.inicio].name;
-        this.origin = this.rta[--this.inicio].origin.name;
-        this.species = this.rta[--this.inicio].species;
-        this.status = this.rta[--this.inicio].status;
-      });
+  anterior(): void{
+    this.numero--;
+    this.llamarString(this.numero);
   }
 }
