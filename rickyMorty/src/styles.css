@@ -4,34 +4,6 @@ body{
   font-family: 'Open Sans', sans-serif;
 }
 
-@media only screen and (max-width: 768px) {
-  body {
-    background-color: #bfce51;
-    margin: auto;
-    font-family: 'Open Sans', sans-serif;
-  }
-
-  .table-responsive {
-    font-family: 'Open Sans', sans-serif;
-    width: 100%;
-    overflow-y: hidden;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-
-  }
-  .table-responsive > .table {
-    margin-bottom: 0;
-  }
-  .table-responsive >table > thead > tr > th,
-  .table-responsive >table > tbody > tr > th,
-  .table-responsive >table > tfoot > tr > th,
-  .table-responsive >table > thead > tr > td,
-  .table-responsive >table > tbody > tr > td,
-  .table-responsive >table > tfoot > tr > td {
-    white-space: nowrap;
-  }
-
-}
-
 main {
   column-count: 2;
   column-gap: 3em;
@@ -47,10 +19,6 @@ main {
   width: 250px;
   border-radius: 5px;
   margin: auto;
-
-
-
-
 }
 
 #divImg {
@@ -108,20 +76,66 @@ table td {
 }
 
 .header{
-  padding: 14px;
+
   text-align: center;
 }
 
 .footer{
-  position: absolute;
   position: absolute;
   bottom: 0px;
   width: 100%;
 }
 #imgPrincipal {
   border-radius: 150px;
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   border: #bfce51;
-  margin-top: 15%;
+  padding: initial;
+}
+
+
+@media only screen and (max-width: 768px) {
+  body {
+    background-color: #bfce51;
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .table-responsive {
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+
+  }
+  .table-responsive > .table {
+    margin-bottom: 0;
+  }
+  .table-responsive >table > thead > tr > th,
+  .table-responsive >table > tbody > tr > th,
+  .table-responsive >table > tfoot > tr > th,
+  .table-responsive >table > thead > tr > td,
+  .table-responsive >table > tbody > tr > td,
+  .table-responsive >table > tfoot > tr > td {
+    white-space: nowrap;
+  }
+
+  td {
+    display:inline-block;
+    padding:5px;
+    width:100%;
+    margin: auto;
+  }
+
+  #cajas {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    border-color: #f7de8e ;
+    background-color: #f7de8e;
+    padding: 0px;
+    width: 250px;
+    border-radius: 5px;
+    margin: auto;
+  }
+
 }

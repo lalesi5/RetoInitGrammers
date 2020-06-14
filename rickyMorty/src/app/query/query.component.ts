@@ -10,6 +10,7 @@ import { HttpClient} from '@angular/common/http';
 export class QueryComponent implements OnInit {
 
   conversiones: any;
+  nombre: string;
   rta: any[];
 
   constructor(
@@ -21,6 +22,7 @@ export class QueryComponent implements OnInit {
   this.llamarString();
   }
 
+  // Llamada a la Api para obtener JSON de datos
 
   llamarString(): void {
     this.http.get('https://rickandmortyapi.com/api/character')
@@ -29,7 +31,4 @@ export class QueryComponent implements OnInit {
         this.rta = this.conversiones;
       });
   }
-
-  llamarAnterior(): void {}
-
 }
