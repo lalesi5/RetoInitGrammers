@@ -16,6 +16,7 @@ export class QueryComponent implements OnInit {
   status: string;
   picture: any;
   rta: any[];
+  inicio = 0;
 
   constructor(
     private http: HttpClient
@@ -23,22 +24,50 @@ export class QueryComponent implements OnInit {
 
 
   ngOnInit(): void {
-  this.llamarString(1);
+  this.llamarString();
   }
 
   // Llamada a la Api para obtener JSON de datos
 
-  llamarString(id: number): void {
+  llamarString(): void {
 
     this.http.get('https://rickandmortyapi.com/api/character')
       .subscribe((data: any) => {
         this.conversiones = data.results;
         this.rta = this.conversiones;
-        this.picture = this.rta[id].image;
-        this.nombre = this.rta[id].name;
-        this.origin = this.rta[id].origin.name;
-        this.species = this.rta[id].species;
-        this.status = this.rta[id].status;
+        this.picture = this.rta[this.inicio].image;
+        this.nombre = this.rta[this.inicio].name;
+        this.origin = this.rta[this.inicio].origin.name;
+        this.species = this.rta[this.inicio].species;
+        this.status = this.rta[this.inicio].status;
+      });
+  }
+
+  llamarStringAnterior(): void {
+
+    this.http.get('https://rickandmortyapi.com/api/character')
+      .subscribe((data: any) => {
+        this.conversiones = data.results;
+        this.rta = this.conversiones;
+        this.picture = this.rta[--this.inicio].image;
+        this.nombre = this.rta[--this.inicio].name;
+        this.origin = this.rta[--this.inicio].origin.name;
+        this.species = this.rta[--this.inicio].species;
+        this.status = this.rta[--this.inicio].status;
+      });
+  }
+
+  llamarStringSiguiente(): void {
+
+    this.http.get('https://rickandmortyapi.com/api/character')
+      .subscribe((data: any) => {
+        this.conversiones = data.results;
+        this.rta = this.conversiones;
+        this.picture = this.rta[--this.inicio].image;
+        this.nombre = this.rta[--this.inicio].name;
+        this.origin = this.rta[--this.inicio].origin.name;
+        this.species = this.rta[--this.inicio].species;
+        this.status = this.rta[--this.inicio].status;
       });
   }
 }
