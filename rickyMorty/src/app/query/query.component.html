@@ -1,33 +1,29 @@
-<div class="row">
-  <div class="col">
-    <table class="table table-hover" align="center">
+<button class="arrow1" onclick="disminuir()"></button>
+<button class="arrow2" onclick="aumentar()"></button>
 
+
+
+
+<div class="table-responsive">
+  <table style="width: 100%">
       <tbody>
       <tr>
-        <img src="$(rta[0].image)" width="100px" class="img-fluid rounded-circle">
-      </tr>
-      <tr>
         <td>
-          <h2>{{rta[0].name}}</h2>
+          <img id="imgPrincipal" src='{{rta[0].image}}'>
+        </td>
+        <td>
+          <h2>{{rta[0].name}}</h2><br><br><br><br><br><br><br><br><br><br>
+          <div  id="cajas">
+            <p>Origen: {{rta[0].origin.name}}</p>
+          </div>
+          <div id="cajas">
+            <p>Especie: {{rta[0].species}}</p>
+          </div>
+          <div id="cajas">
+            <p>Estatus: {{rta[0].status}}</p>
+          </div>
         </td>
       </tr>
-      <tr>
-        <td>
-          <p>Origen: {{rta[0].origin.name}}</p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p>Especie: {{rta[0].species}}</p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p>Estatus: {{rta[0].status}}</p>
-        </td>
-      </tr>
-
       </tbody>
     </table>
-  </div>
 </div>

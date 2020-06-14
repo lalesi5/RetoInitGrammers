@@ -1,28 +1,108 @@
-{font-family: Open-Sans;}
-
 
 body{
   background: #00afc7;
-  border-style: solid;
-  border-width: 2px;
-  margin: 7rem;
+  font-family: Open-Sans;
 }
 
 @media only screen and (max-width: 768px) {
   body {
     background-color: #bfce51;
+    margin: auto;
+  }
 
-    margin: 1rem;
+  .table-responsive {
+    font-family: Open-Sans;
+    width: 100%;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+
   }
-  .row, .navbar {
-    flex-direction: column;
+  .table-responsive > .table {
+    margin-bottom: 0;
   }
+  .table-responsive >table > thead > tr > th,
+  .table-responsive >table > tbody > tr > th,
+  .table-responsive >table > tfoot > tr > th,
+  .table-responsive >table > thead > tr > td,
+  .table-responsive >table > tbody > tr > td,
+  .table-responsive >table > tfoot > tr > td {
+    white-space: nowrap;
+  }
+
+}
+
+main {
+  column-count: 2;
+  column-gap: 3em;
+  column-rule: 1px solid #bbb;
+  column-width: 140px;
+}
+#cajas {
+  font-family: Open-Sans;
+  border-color: #f7de8e ;
+  background-color: #f7de8e;
+  padding: 0px;
+  width: 250px;
+  border-radius: 5px;
+  margin: auto;
+
+
+
+
+}
+
+#divImg {
+  padding: 10px;
+  float: left;
+  width: 45%;
+  text-align: justify;
 }
 
 h2 {
   font-size: 40px;
   color: aliceblue;
-  align-content: center;
+  text-align: center;
+}
+
+p {
+  font-size: 16px;
+  text-align: center;
+  color: #2d2d2d;
+}
+
+table td {
+  width: 1%;
+  text-align: center;
+  left: 1px;
+  right: 0px;
+}
+
+.arrow1{
+  width: 2em;
+  height: 2em;
+  border-radius: 0 0 0 0;
+  margin: -2em 2.5em;
+  transform: rotate(135deg);
+  background: linear-gradient(-45deg, white 50%, transparent 50%);
+  position: absolute;
+  z-index: 2;
+  left: 0px;
+  top: 50%;
+  border: #00afc7;
+}
+
+.arrow2{
+  width: 2em;
+  height: 2em;
+  border-radius: 0 0 0 0;
+  margin: -2em 2.5em;
+  transform: rotate(315deg);
+  background: linear-gradient(-45deg, white 50%, transparent 50%);
+  position: absolute;
+  z-index: 2;
+  right: 0px;
+  top: 50%;
+  border: #00afc7;
 }
 
 .header{
@@ -36,7 +116,10 @@ h2 {
   bottom: 0px;
   width: 100%;
 }
-
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+#imgPrincipal {
+  border-radius: 150px;
+  width: 300px;
+  height: 300px;
+  border: #bfce51;
+  margin-top: 15%;
+}
