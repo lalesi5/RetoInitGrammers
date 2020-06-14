@@ -1,17 +1,18 @@
 
 body{
   background: #00afc7;
-  font-family: Open-Sans;
+  font-family: 'Open Sans', sans-serif;
 }
 
 @media only screen and (max-width: 768px) {
   body {
     background-color: #bfce51;
     margin: auto;
+    font-family: 'Open Sans', sans-serif;
   }
 
   .table-responsive {
-    font-family: Open-Sans;
+    font-family: 'Open Sans', sans-serif;
     width: 100%;
     overflow-y: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -38,7 +39,8 @@ main {
   column-width: 140px;
 }
 #cajas {
-  font-family: Open-Sans;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
   border-color: #f7de8e ;
   background-color: #f7de8e;
   padding: 0px;

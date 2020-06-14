@@ -18,12 +18,18 @@ export class QueryComponent implements OnInit {
 
 
   ngOnInit(): void {
-  this.http.get('https://rickandmortyapi.com/api/character')
-    .subscribe((data: any) => {
-      this.conversiones = data.results;
-      this.rta = this.conversiones;
-    });
-
+  this.llamarString();
   }
+
+
+  llamarString(): void {
+    this.http.get('https://rickandmortyapi.com/api/character')
+      .subscribe((data: any) => {
+        this.conversiones = data.results;
+        this.rta = this.conversiones;
+      });
+  }
+
+  llamarAnterior(): void {}
 
 }
